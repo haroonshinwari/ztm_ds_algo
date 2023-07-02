@@ -1,9 +1,6 @@
 package org.datastructures.arrays;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Set;
+import java.util.*;
 
 public class MaximumSubarray {
 
@@ -37,8 +34,11 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
         System.out.println(maxSubArrayBruteForce(nums2));
         System.out.println(maxSubArrayBruteForce(nums3));
 
+        System.out.println(maxSubArrayHashmap(nums));
+
     }
 
+    //0(N^2) N-Squared solution  - looping through two arrays
     public static int maxSubArrayBruteForce(int[] nums) {
 
         //Hashmap that stores subarrays with key as total sum and value as subarray
@@ -57,10 +57,27 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
         }
 
         Set<Integer> sumValues = myHashmap.keySet();
-
         return Collections.max(sumValues);
     }
 
 
+    //Linear solution 0 (n) -- Remove negative prefix ""Sliding window" - 0(n)
+    public static int maxSubArrayHashmap(int[] nums) {
+
+        int maxSub = nums[0];
+        int currentSum= 0;
+
+        for (int num : nums) {
+
+            if (currentSum < 0) {
+                currentSum = 0;
+            }
+            currentSum += num;
+            maxSub = Math.max(maxSub, currentSum);
+        }
+
+        return maxSub;
+
+    }
 
 }
