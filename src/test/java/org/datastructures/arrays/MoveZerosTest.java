@@ -1,9 +1,7 @@
 package org.datastructures.arrays;
 
 import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
-
 import static org.datastructures.arrays.MoveZeros.moveZeroesUsingLeftPointer;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

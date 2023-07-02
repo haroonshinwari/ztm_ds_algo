@@ -1,7 +1,6 @@
 package org.datastructures.arrays;
 
 import org.junit.jupiter.api.Test;
-
 import static org.datastructures.arrays.MaximumSubarray.maxSubArrayBruteForce;
 import static org.datastructures.arrays.MaximumSubarray.maxSubArrayHashmap;
 import static org.junit.jupiter.api.Assertions.assertEquals;
