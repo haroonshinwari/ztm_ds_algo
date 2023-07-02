@@ -34,15 +34,7 @@ public class MergeSortedArrays {
                 index2++;
             }
         }
-
         return emptyArray;
-
-
-
-
-
-
-
 
     }
 }
