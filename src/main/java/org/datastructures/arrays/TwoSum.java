@@ -1,6 +1,8 @@
 package org.datastructures.arrays;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSum {
 
@@ -32,9 +34,9 @@ public class TwoSum {
 
         int[] nums2 = {3,2,4};
         int target2 = 6;
-        System.out.println(Arrays.toString(twoSumsBruteForce(nums2, target2)));
+       System.out.println(Arrays.toString(twoSumsBruteForce(nums2, target2)));
 
-        int[] nums3 = {3,2};
+        int[] nums3 = {3,3};
         int target3 = 6;
         System.out.println(Arrays.toString(twoSumsBruteForce(nums3, target3)));
 
@@ -45,15 +47,33 @@ public class TwoSum {
         int[] solution = new int[2];
 
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 1; j < nums.length - 1; j++) {
+            for (int j = 1; j < nums.length; j++) {
                 if (nums[i]+ nums[j] == target) {
                     solution[0]= i;
                     solution[1] = j;
                     return solution;
                 }
             }
-
         }
         return solution;
+    }
+
+
+    static int[] twoSumsUsingHashmap(int[] nums, int target) {
+
+        //This hashmap will contain keys as complements(array values) and value as the index in the array
+        Map<Integer, Integer> valueAndIndexHashmap = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+
+            //calculate complement first
+            int complement = target - nums[i];
+
+            if (valueAndIndexHashmap.containsKey(complement)) {
+                return new int[]{valueAndIndexHashmap.get(complement), i};
+            }
+            valueAndIndexHashmap.put(nums[i], i);
+            }
+        return null;
     }
 }
