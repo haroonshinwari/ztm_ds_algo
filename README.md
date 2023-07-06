@@ -2,14 +2,15 @@
 
 Data Structures 
 
-- Arrays (In Progress)
+- Arrays (Completed)
+- Hash Table (Completed)
+- Linked Lists - Single and Double (Completed)
 - Stacks
 - Queues
-- Linked Lists
 - Trees
-- Tries
 - Graphs
-- Hash Table
+- Tries
+
 
 Algorithms
 
