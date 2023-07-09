@@ -5,16 +5,19 @@ Data Structures
 - Arrays (Completed)
 - Hash Table (Completed)
 - Linked Lists - Single and Double (Completed)
+
 - Stacks
 - Queues
-- Trees
+
+- Trees (Binary Tree, AVL Tree, Red/Black Tree, Heap, Trie )  
+
 - Graphs
-- Tries
 
 
 Algorithms
 
-- Sorting
-- Dynamic Programming
-- BFS + DFS (Searching)
 - Recursion
+- Sorting
+- BFS + DFS (Searching)
+- Dynamic Programming
+
